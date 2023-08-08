@@ -1,8 +1,8 @@
 import { NEW_MESSAGE } from './types'
-import uuid from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 
 export const newMessage = (text) => ({
-  id: uuid(),
+  id:  uuidv4(),
   type: NEW_MESSAGE,
   item: {
     text, timestamp: Date.now(),
