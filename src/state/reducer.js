@@ -1,6 +1,10 @@
 import { NEW_MESSAGE } from './types'
 
+export const initialState = { messages: [] }
+
 const reducer = (state, action) => {
+  console.log(  'reducer') // eslint-disable-line
+
   switch (action.type) {
     case NEW_MESSAGE:
       return { ...state, messages: [...state.messages, action.item] }
@@ -9,4 +13,4 @@ const reducer = (state, action) => {
   }
 }
 
-export default reducer()
+export default reducer
